@@ -10,15 +10,15 @@ const OrderSchema = new mongoose.Schema(
         },
     
        items:[{
-        product:{ type:String,required:true,ref:'product'},
+        product:{ type:String, required:true,ref:'product'},
         quantity:{ type:Number , required:true }
        }],
 
-       amount:{ type:Number,required:true },
+       amount:{ type:Number, required:true },
 
        address:{type:String, required:true,ref:'address'},
        status:{type:String, required:true, default:'Order Placed'},
-       date : { type:Number, reuqired:true },
+       date : { type:Number, required:true },
 })
 
 const Order = mongoose.models.order ||  mongoose.model('order',OrderSchema)
